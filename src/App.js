@@ -5,6 +5,8 @@ import Navigation from './routes/navigation/navigation.component';
 import Authentication from './routes/authentification/authentication.component';
 import Shop from './routes/shop/shop.component';
 
+import CartIcon from './component/cart-icon/cart-icon.component';
+
 const App = () => {
 	return (
 		<Routes>
