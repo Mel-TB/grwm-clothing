@@ -67,6 +67,7 @@ const SignInForm = () => {
 					name="email"
 					value={email}
 					required
+					autoComplete="on"
 				/>
 
 				<FormInput
@@ -76,6 +77,7 @@ const SignInForm = () => {
 					name="password"
 					value={password}
 					required
+					autoComplete="on"
 				/>
 				<div className="buttons-container">
 					<Button type="submit" buttonType="inverted">

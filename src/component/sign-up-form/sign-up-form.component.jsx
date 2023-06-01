@@ -66,6 +66,7 @@ const SignUpForm = () => {
 					name="displayName"
 					value={displayName}
 					required
+					autoComplete="on"
 				/>
 
 				<FormInput
@@ -75,6 +76,7 @@ const SignUpForm = () => {
 					name="email"
 					value={email}
 					required
+					autoComplete="on"
 				/>
 
 				<FormInput
@@ -84,6 +86,7 @@ const SignUpForm = () => {
 					name="password"
 					value={password}
 					required
+					autoComplete="on"
 				/>
 
 				<FormInput
@@ -93,6 +96,7 @@ const SignUpForm = () => {
 					name="confirmPassword"
 					value={confirmPassword}
 					required
+					autoComplete="on"
 				/>
 
 				<Button type="submit">Sign Up </Button>
