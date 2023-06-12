@@ -100,22 +100,26 @@ export const CartProvider = ({ children }) => {
 
 		const payload = {
 			cartItems,
-			cartCount: newCartCount,
+			cartItemCount: newCartCount,
 			cartTotal: newCartTotal,
 		};
 
 		dispatch(createAction(CART_ACTION_TYPES.SET_CART_ITEMS, payload));
 	};
-	const addItemToCart = (product) => {
-		updateCartItemsReducer(addCartItem(cartItems, product));
+
+	const addItemToCart = (productToAdd) => {
+		const newCartItems = addCartItem(cartItems, productToAdd);
+		updateCartItemsReducer(newCartItems);
 	};
 
 	const removeItemToCart = (cartItemToRemove) => {
-		updateCartItemsReducer(removeCartItem(cartItems, cartItemToRemove));
+		const newCartItems = removeCartItem(cartItems, cartItemToRemove);
+		updateCartItemsReducer(newCartItems);
 	};
 
 	const clearItemFromCart = (cartItemToClear) => {
-		updateCartItemsReducer(clearItemCart(cartItems, cartItemToClear));
+		const newCartItems = clearItemCart(cartItems, cartItemToClear);
+		updateCartItemsReducer(newCartItems);
 	};
 
 	const value = {
