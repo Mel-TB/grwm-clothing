@@ -6,6 +6,7 @@ import { Routes, Route } from 'react-router-dom';
 import {
 	onAuthStateChangedListener,
 	createUserDocumentFromAuth,
+	getCategoriesAndDocuments,
 } from './utils/firebase/firebase.utils';
 
 import Home from './routes/home/home.component';
@@ -14,6 +15,7 @@ import Authentication from './routes/authentification/authentication.component';
 import Shop from './routes/shop/shop.component';
 import Checkout from './routes/checkout/checkout.component';
 import { setCurrentUser } from './store/user/user.action';
+import { setCategoriesMap } from './store/categories/category.action';
 
 const App = () => {
 	const dispatch = useDispatch();
