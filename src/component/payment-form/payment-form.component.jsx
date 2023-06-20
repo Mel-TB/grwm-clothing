@@ -60,6 +60,7 @@ const PaymentForm = () => {
 		} else {
 			if (paymentResult.paymentIntent.status === 'succeeded') {
 				alert('Payment Successful');
+				window.location.replace('http://localhost:8888/');
 			}
 		}
 	};

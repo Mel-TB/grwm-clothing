@@ -10,7 +10,13 @@ import {
 	emailSignInStart,
 } from '../../store/user/user.action';
 
-import { SignInContainer, ButtonsContainer } from './sign-in-form-styles';
+import {
+	SignInContainer,
+	ButtonsContainer,
+	Separator,
+	Line,
+	LinkSignUp,
+} from './sign-in-form-styles';
 
 const defaultFormFields = {
 	email: '',
@@ -70,16 +76,31 @@ const SignInForm = () => {
 					value={password}
 				/>
 				<ButtonsContainer>
-					<Button type="submit">Sign In</Button>
+					<Button type="submit" buttonType={BUTTON_TYPE_CLASSES.inverted}>
+						Sign In
+					</Button>
+				</ButtonsContainer>
+
+				<Separator>
+					<Line />
+					<span>Or</span>
+					<Line />
+				</Separator>
+
+				<ButtonsContainer>
 					<Button
 						buttonType={BUTTON_TYPE_CLASSES.google}
 						type="button"
 						onClick={signInWithGoogle}
 					>
-						Sign In With Google
+						Sign in with Google
 					</Button>
 				</ButtonsContainer>
 			</form>
+			<p>
+				Doesn't have an account?{' '}
+				<LinkSignUp to={'/SignUpForm'}>Sign Up</LinkSignUp>
+			</p>
 		</SignInContainer>
 	);
 };
